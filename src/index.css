@@ -1,0 +1,45 @@
+:root {
+  --color-principal: #023059;
+  --color-secundario: #daedf5;
+  --text-light: #ffffff;
+}
+
+.bg-principal {
+  background-color: var(--color-principal) !important;
+}
+
+.bg-secundario {
+  background-color: var(--color-secundario) !important;
+}
+
+.text-principal {
+  color: var(--color-principal) !important;
+}
+
+.text-secundario {
+  color: var(--color-secundario) !important;
+}
+
+.btn-principal {
+  background-color: #023059;
+  color: #daedf5;
+}
+
+.btn-principal:hover {
+  background-color: #3f77bf;
+  color: #ffffff;
+}
+
+.bg-footer {
+  background-color: #023059;
+}
+
+.text-footer {
+  color: #ffe8a3;
+}
+
+#about,
+#contact,
+#projects {
+  scroll-margin-top: 50px; /* Ajusta 70px según la altura real de tu navbar */
+}

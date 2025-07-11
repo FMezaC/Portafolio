@@ -1,0 +1,81 @@
+.tech-tree {
+  display: flex;
+  justify-content: center;
+  font-family: monospace;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tech-tree ul {
+  position: relative;
+  min-width: max-content;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.tech-tree li {
+  text-align: center;
+  position: relative;
+  padding: 10px 5px 0 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Líneas entre nodos */
+.tech-tree li::before,
+.tech-tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-top: 1px solid black;
+  width: 50%;
+  height: 20px;
+}
+
+.tech-tree li::before {
+  left: -50%;
+  border-right: 1px solid black;
+}
+
+.tech-tree li::after {
+  right: -50%;
+  border-left: 1px solid black;
+}
+
+/* Quitar líneas si es hijo único */
+.tech-tree li:only-child::before,
+.tech-tree li:only-child::after {
+  display: none;
+}
+
+.tech-tree li:only-child {
+  padding-top: 0;
+}
+
+/* Quitar bordes en extremos */
+.tech-tree li:first-child::before {
+  border: none;
+}
+
+.tech-tree li:last-child::after {
+  border: none;
+}
+
+.node {
+  display: inline-block;
+  font-weight: bold;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.node:hover {
+  background-color: #023059;
+  color: #ffffff;
+  cursor: grab;
+}
