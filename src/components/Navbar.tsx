@@ -5,10 +5,6 @@ function Navbar() {
   const toggleNavbar = () => setIsOpen(!isOpen);
   const handleLinkClick = () => setIsOpen(false);
 
-  const languages = [
-    { code: "EN", label: "English" },
-    { code: "ES", label: "Español" },
-  ];
   return (
     <nav className="navbar navbar-expand-lg bg-principal navbar-dark sticky-top">
       <div className="container">
