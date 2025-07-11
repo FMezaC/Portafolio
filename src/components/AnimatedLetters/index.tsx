@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface AnimatedLettersProps {
   textAnimated: string;
@@ -6,21 +6,26 @@ interface AnimatedLettersProps {
 
 const AnimatedLetters = ({ textAnimated }: AnimatedLettersProps) => {
   const [displayedText, setDisplayedText] = useState("");
+  const indexRef = useRef(0);
+  const animationRef = useRef<number>();
 
   useEffect(() => {
-    let index = 0;
-    const typeLetter = () => {
-      if (index < textAnimated.length) {
-        setDisplayedText((prev) => prev + textAnimated.charAt(index));
-        index++;
-        setTimeout(typeLetter, 150);
+    setDisplayedText("");
+    indexRef.current = 0;
+
+    const animate = () => {
+      if (indexRef.current <= textAnimated.length) {
+        setDisplayedText(textAnimated.substring(0, indexRef.current));
+        indexRef.current += 1;
+        animationRef.current = requestAnimationFrame(animate);
+      } else {
+        cancelAnimationFrame(animationRef.current!);
       }
     };
 
-    typeLetter();
-    return () => {
-      index = textAnimated.length;
-    };
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => cancelAnimationFrame(animationRef.current!);
   }, [textAnimated]);
 
   return <h1 className="text-principal">{displayedText}</h1>;
