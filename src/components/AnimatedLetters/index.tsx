@@ -9,12 +9,11 @@ const AnimatedLetters = ({ textAnimated }: AnimatedLettersProps) => {
 
   useEffect(() => {
     let index = 0;
-
     const typeLetter = () => {
       if (index < textAnimated.length) {
         setDisplayedText((prev) => prev + textAnimated.charAt(index));
         index++;
-        setTimeout(typeLetter, 100);
+        setTimeout(typeLetter, 150);
       }
     };
 

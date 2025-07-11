@@ -4,8 +4,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import BackendTree from "../components/Arbolbinario/backendTree.tsx";
 import emailJs from "@emailjs/browser";
+import ToastNotification from "../components/Alerts/ToastNotification.tsx";
 
 const Contact = () => {
+  const [showToast, setShowToast] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,7 +48,8 @@ const Contact = () => {
           message: "",
           time: new Date().toLocaleString(),
         });
-        alert("Mensaje enviado");
+        setShowToast(true);
+        setTimeout(() => setShowToast(false), 4000);
       },
       (error) => {
         console.log("error al enviar mensaje", error);
@@ -119,6 +123,12 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <ToastNotification
+          show={showToast}
+          message="¡Mensaje enviado con éxito!"
+          onClose={() => setShowToast(false)}
+          type="success"
+        />
       </div>
     </section>
   );
