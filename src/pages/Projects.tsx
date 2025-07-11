@@ -12,25 +12,25 @@ import Bubble from "../components/AnimatedLetters/bubble.tsx";
 
 const Proyects = () => {
   const featVentas = [
-    "Escaneo de códigos de barras",
-    "Gestión de usuarios",
-    "Reportes de ventas",
-    "Control de stock",
-    "Venta de productos",
+    "Barcode scanning",
+    "User management",
+    "Sales reporting",
+    "Inventory control",
+    "Product sales",
   ];
 
   const featFlota = [
-    "Control de flotas y unidades",
-    "Reporte de carga transportada",
-    "Gestion y control de facturas",
-    "Control de viatico",
+    "Fleet and vehicle management",
+    "Transported cargo reporting",
+    "Invoice management and tracking",
+    "Expense and travel allowance",
   ];
 
   const featBiblioteca = [
-    "Registro y catálogo de libros",
-    "Gestión de usuarios y préstamos",
-    "Control de devolución",
-    "Reportes de uso y actividad bibliotecaria",
+    "Book registration and cataloging",
+    "User and loan management",
+    "Return tracking",
+    "Library usage and activity reporting",
   ];
 
   return (
@@ -45,10 +45,10 @@ const Proyects = () => {
               <div className="card-body">
                 <h5 className="card-title">Punto de ventas</h5>
                 <p className="card-text">
-                  Sistema de Punto de Ventas (POS) desarrollado para facilitar
-                  la gestión de ventas, inventario, clientes y genera tickets,
-                  objetivo Automatizar y digitalizar procesos de ventas en
-                  pequeños comercios
+                  Developed a Point of Sale (POS) system to streamline sales,
+                  inventory, and customer management, including automated
+                  receipt generation. Designed to digitize and optimize retail
+                  operations for small businesses.
                 </p>
                 <TreeNode node={puntoDeVenta} />
                 <ol className="">
@@ -67,11 +67,10 @@ const Proyects = () => {
               <div className="card-body">
                 <h5 className="card-title">Sistema de flotas</h5>
                 <p className="card-text">
-                  Controlar y optimizar la operación de transporte de carga,
-                  facilitando la administración de vehículos, carga, facturación
-                  y viáticos. Objetivo la gestión logística y financiera de
-                  flotas para mejorar la eficiencia operativa y la toma de
-                  decisiones.
+                  Led optimization of freight operations by enhancing vehicle,
+                  billing, and expense management systems. Improved fleet
+                  logistics and financial oversight, enabling greater
+                  operational efficiency and analytics-driven decision-making.
                 </p>
                 <TreeNode node={SysFlotas} />
                 <ol className="">
@@ -88,10 +87,9 @@ const Proyects = () => {
               <div className="card-body">
                 <h5 className="card-title">Biblioteca</h5>
                 <p className="card-text">
-                  Sistema diseñado para gestionar el préstamo de libros,
-                  usuarios y catálogos bibliográficos de forma eficiente.
-                  Objetivo facilitar el acceso a la información, mejorando la
-                  organización y trazabilidad de los recursos disponibles.
+                  Created a solution to simplify book lending and user
+                  management, improving access to information and ensuring
+                  better organization and traceability of library resources.
                 </p>
                 <TreeNode node={SysBiblioteca} />
                 <ol>

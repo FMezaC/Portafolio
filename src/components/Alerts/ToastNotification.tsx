@@ -13,7 +13,7 @@ const ToastNotification = ({
 }: ToastNotificationProps) => {
   return (
     <div
-      className="toast-container position-fixed bottom-0 end-0 p-3"
+      className="toast-container position-fixed bottom-0 end-0 p-4"
       style={{ zIndex: 9999 }}
     >
       <div

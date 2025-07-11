@@ -4,12 +4,38 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleNavbar = () => setIsOpen(!isOpen);
   const handleLinkClick = () => setIsOpen(false);
+
+  const languages = [
+    { code: "EN", label: "English" },
+    { code: "ES", label: "Español" },
+  ];
   return (
     <nav className="navbar navbar-expand-lg bg-principal navbar-dark sticky-top">
       <div className="container">
         <a className="navbar-brand" href="#">
           Federico Meza
         </a>
+        <div className="dropdown me-auto">
+          <button
+            className="btn btn-principal btn-sm dropdown-toggle"
+            type="button"
+            id="languageDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            EN
+          </button>
+          <ul
+            className="dropdown-menu bg-principal"
+            aria-labelledby="languageDropdown"
+          >
+            <li>
+              <a className="dropdown-item btn-principal" href="#">
+                ES
+              </a>
+            </li>
+          </ul>
+        </div>
         <button
           className="navbar-toggler"
           type="button"

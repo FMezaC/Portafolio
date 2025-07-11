@@ -62,8 +62,8 @@ const Contact = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <h2 className="mb-4 text-center">Contact Me</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="border p-4 rounded">
+              <h2 className="mb-4 text-center text-principal">Contact Me</h2>
               <div className="mb-3">
                 <input
                   type="text"
