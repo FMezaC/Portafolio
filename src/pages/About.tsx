@@ -12,13 +12,14 @@ import { faCode, faDatabase } from "@fortawesome/free-solid-svg-icons";
 
 const About = () => {
   const skills = [
-    "CSharp",
+    ".Net C#",
     "DataBase",
     "React",
     "Node.js",
     "GitHub",
     "JavaScript",
   ];
+
   return (
     <section id="about" className="py-5">
       <div className="container">
@@ -34,12 +35,18 @@ const About = () => {
               I'm quietly confident, naturaly corious, and perpetually working
               on improving my chops one design problem at a time.
             </p>
+            <p>
+              <strong>
+                BackEnd Developer | 3+ years of experience in building
+                high-performance systems.
+              </strong>
+            </p>
             <div className="">
               <h3 className="text-principal">My Skills</h3>
               {skills.map((skill) => (
                 <span
                   key={skill}
-                  className="badge skill-badge bg-dark me-2 mb-2"
+                  className="badge skill-badge bg-principal me-2 mb-2"
                   style={{ fontSize: "1rem" }}
                 >
                   {skill}

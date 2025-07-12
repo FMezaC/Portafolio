@@ -4,6 +4,10 @@
   font-family: monospace;
   overflow-x: auto;
   scrollbar-width: none;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
+  cursor: grab;
 }
 
 .tech-tree ul {
@@ -77,5 +81,4 @@
 .node:hover {
   background-color: #023059;
   color: #ffffff;
-  cursor: grab;
 }
