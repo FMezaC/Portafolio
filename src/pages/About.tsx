@@ -27,6 +27,12 @@ const About = () => {
           <div className="col-md-9">
             <AnimatedLetters textAnimated="About me" />
             <p>
+              <strong>
+                BackEnd Developer | 3+ years of experience in building
+                high-performance systems.
+              </strong>
+            </p>
+            <p>
               I'm very ambitious BackEnd Developer looking for a role in
               stablished IT company with the oportunity to work with the latest
               technologies on challenging and diverse proyects.
@@ -34,12 +40,6 @@ const About = () => {
             <p>
               I'm quietly confident, naturaly corious, and perpetually working
               on improving my chops one design problem at a time.
-            </p>
-            <p>
-              <strong>
-                BackEnd Developer | 3+ years of experience in building
-                high-performance systems.
-              </strong>
             </p>
             <div className="">
               <h3 className="text-principal">My Skills</h3>
